@@ -132,21 +132,19 @@ export const backdropVariants: Variants = {
 };
 
 export const drawerSlideVariants: Variants = {
-  hidden: { x: '100%' },
+  hidden: { x: '-100%' },
   visible: {
     x: 0,
     transition: {
-      type: 'spring',
-      stiffness: 360,
-      damping: 32,
-      mass: 0.8,
+      duration: 0.25,
+      ease: EASING.smooth,
     },
   },
   exit: {
-    x: '100%',
+    x: '-100%',
     transition: {
-      duration: DURATION.fast,
-      ease: EASING.smooth,
+      duration: 0.2,
+      ease: EASING.easeIn,
     },
   },
 };
