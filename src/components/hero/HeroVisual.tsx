@@ -111,7 +111,7 @@ export const HeroVisual: React.FC = () => {
                   </span>
                 </div>
                 <div className="text-xs text-text-secondary">
-                  Credentials, ATS resume architect & learning hub
+                  Official certificates, ATS resume & learning hub
                 </div>
               </div>
             </div>

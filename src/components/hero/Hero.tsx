@@ -66,18 +66,20 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
 
             {/* Trust Signal Pillars */}
-            <div className="pt-6 sm:pt-8 border-t border-border-subtle grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-text-secondary">
-              <div className="flex items-center justify-center lg:justify-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-accent-brand shrink-0" aria-hidden="true" />
-                <span>Verified Discovery Engine</span>
-              </div>
-              <div className="flex items-center justify-center lg:justify-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-accent-brand shrink-0" aria-hidden="true" />
-                <span>Modern Builder Tooling</span>
-              </div>
-              <div className="flex items-center justify-center lg:justify-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-accent-brand shrink-0" aria-hidden="true" />
-                <span>Zero Gatekeeping</span>
+            <div className="pt-6 sm:pt-8 border-t border-border-subtle flex justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-2.5 sm:gap-6 text-xs font-medium text-text-secondary">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-accent-brand shrink-0" aria-hidden="true" />
+                  <span className="whitespace-nowrap">Verified Discovery Engine</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-accent-brand shrink-0" aria-hidden="true" />
+                  <span className="whitespace-nowrap">Modern Builder Tooling</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-accent-brand shrink-0" aria-hidden="true" />
+                  <span className="whitespace-nowrap">Zero Gatekeeping</span>
+                </div>
               </div>
             </div>
           </div>

@@ -71,18 +71,17 @@ export const StatusBadge: React.FC<StatusBadgeProps> = ({
       aria-label={`Product status: ${config.label} — ${config.description}`}
       title={`${config.label}: ${config.description}`}
     >
-      {/* Visual Dot Indicator */}
-      <span
-        className={`h-1.5 w-1.5 rounded-full shrink-0 ${
-          normStatus === 'live' && pulse ? 'animate-pulse' : ''
-        } ${config.dotColor} [html[data-theme="monochromatic"]_&]:!bg-text-primary`}
-        aria-hidden="true"
-      />
-
-      {/* Accessible Status Icon */}
-      {showIcon && (
+      {/* Status Icon or Dot Indicator */}
+      {showIcon ? (
         <Icon
-          className={`${iconSizes} shrink-0 opacity-90 [html[data-theme="monochromatic"]_&]:!text-text-primary`}
+          className={`${iconSizes} shrink-0 opacity-95 [html[data-theme="monochromatic"]_&]:!text-text-primary`}
+          aria-hidden="true"
+        />
+      ) : (
+        <span
+          className={`h-1.5 w-1.5 rounded-full shrink-0 ${
+            normStatus === 'live' && pulse ? 'animate-pulse' : ''
+          } ${config.dotColor} [html[data-theme="monochromatic"]_&]:!bg-text-primary`}
           aria-hidden="true"
         />
       )}
