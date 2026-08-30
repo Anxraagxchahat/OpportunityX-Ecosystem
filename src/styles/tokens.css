@@ -1,0 +1,124 @@
+/* ==========================================================================
+   OPPORTUNITYX DESIGN SYSTEM — CANONICAL DESIGN TOKENS
+   Source of Truth: docs/07-BRAND-ASSET-REGISTRY.md & docs/04-FRONTEND-SPECIFICATION.md
+   ========================================================================== */
+
+:root {
+  /* Core Raw Brand Constants */
+  --oppx-brand-orange-500: #FF6B00;
+  --oppx-brand-orange-400: #FF8533;
+  --oppx-brand-orange-600: #EA580C;
+  --oppx-brand-orange-rgb: 255, 107, 0;
+
+  /* Typography Scale Constants */
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Layout Constants */
+  --max-content-width: 1280px;
+  --header-height: 4.25rem; /* 68px */
+  --header-height-mobile: 3.75rem; /* 60px */
+
+  /* Default Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   THEME 1: DARK MODE (DEFAULT)
+   Canvas: Deep Black | Opportunity: White | X: Electric Orange
+   -------------------------------------------------------------------------- */
+:root[data-theme="dark"],
+:root:not([data-theme]) {
+  --color-canvas: #09090B;
+  --color-surface: #121215;
+  --color-surface-elevated: #18181B;
+  --color-surface-hover: #222226;
+
+  --color-text-primary: #FAFAFA;
+  --color-text-secondary: #A1A1AA;
+  --color-text-muted: #71717A;
+
+  --color-border-subtle: #27272A;
+  --color-border-strong: #3F3F46;
+
+  --color-accent-brand: #FF6B00;
+  --color-accent-hover: #FF8533;
+  --color-accent-subtle: rgba(255, 107, 0, 0.12);
+  --color-accent-glow: rgba(255, 107, 0, 0.25);
+
+  --color-focus-ring: #FF6B00;
+
+  --shadow-subtle: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+
+  --color-badge-bg: rgba(255, 107, 0, 0.10);
+  --color-badge-text: #FF8533;
+  --color-badge-border: rgba(255, 107, 0, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   THEME 2: LIGHT MODE
+   Canvas: Pure White | Opportunity: Black | X: Electric Orange
+   -------------------------------------------------------------------------- */
+:root[data-theme="light"] {
+  --color-canvas: #FFFFFF;
+  --color-surface: #F8FAFC;
+  --color-surface-elevated: #FFFFFF;
+  --color-surface-hover: #F1F5F9;
+
+  --color-text-primary: #09090B;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748B;
+
+  --color-border-subtle: #E2E8F0;
+  --color-border-strong: #CBD5E1;
+
+  --color-accent-brand: #FF6B00;
+  --color-accent-hover: #EA580C;
+  --color-accent-subtle: rgba(255, 107, 0, 0.08);
+  --color-accent-glow: rgba(255, 107, 0, 0.16);
+
+  --color-focus-ring: #FF6B00;
+
+  --shadow-subtle: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  --shadow-elevated: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+
+  --color-badge-bg: rgba(255, 107, 0, 0.08);
+  --color-badge-text: #EA580C;
+  --color-badge-border: rgba(255, 107, 0, 0.20);
+}
+
+/* --------------------------------------------------------------------------
+   THEME 3: MONOCHROMATIC MODE
+   Canvas: Pure White | Opportunity: Black | X: Pure Black (ZERO ORANGE)
+   -------------------------------------------------------------------------- */
+:root[data-theme="monochromatic"] {
+  --color-canvas: #FFFFFF;
+  --color-surface: #F4F4F5;
+  --color-surface-elevated: #FFFFFF;
+  --color-surface-hover: #E4E4E7;
+
+  --color-text-primary: #000000;
+  --color-text-secondary: #52525B;
+  --color-text-muted: #71717A;
+
+  --color-border-subtle: #E4E4E7;
+  --color-border-strong: #D4D4D8;
+
+  /* HARD RULE: ZERO ORANGE IN MONOCHROMATIC MODE */
+  --color-accent-brand: #000000;
+  --color-accent-hover: #27272A;
+  --color-accent-subtle: rgba(0, 0, 0, 0.06);
+  --color-accent-glow: rgba(0, 0, 0, 0.12);
+
+  --color-focus-ring: #000000;
+
+  --shadow-subtle: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+  --shadow-elevated: 0 8px 20px -4px rgba(0, 0, 0, 0.1);
+
+  --color-badge-bg: rgba(0, 0, 0, 0.06);
+  --color-badge-text: #000000;
+  --color-badge-border: rgba(0, 0, 0, 0.18);
+}
