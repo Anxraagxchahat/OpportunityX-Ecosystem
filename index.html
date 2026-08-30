@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Document Title & Meta -->
+    <title>OpportunityX — Student & Builder Ecosystem</title>
+    <meta
+      name="description"
+      content="OpportunityX is a modern career-tech ecosystem empowering ambitious students, developers, and young professionals to discover career-defining opportunities, build real-world products, and validate skills."
+    />
+    <meta name="keywords" content="OpportunityX, hackathons, developer opportunities, student internships, tech careers, builder community" />
+    <meta name="author" content="OpportunityX" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://opportunityx.co.in/" />
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://opportunityx.co.in/" />
+    <meta property="og:title" content="OpportunityX — Student & Builder Ecosystem" />
+    <meta
+      property="og:description"
+      content="One ecosystem. Endless possibilities. Discover career-defining opportunities, builder tools, and collaborative community."
+    />
+    <meta property="og:image" content="https://opportunityx.co.in/brand/logo/dark/opportunityx-logo-dark.png" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://opportunityx.co.in/" />
+    <meta name="twitter:title" content="OpportunityX — Student & Builder Ecosystem" />
+    <meta
+      name="twitter:description"
+      content="One ecosystem. Endless possibilities. Discover career-defining opportunities, builder tools, and collaborative community."
+    />
+    <meta name="twitter:image" content="https://opportunityx.co.in/brand/logo/dark/opportunityx-logo-dark.png" />
+
+    <!-- Favicon Suite (From Canonical Brand Asset Registry) -->
+    <link rel="icon" type="image/x-icon" href="/brand/favicon/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/brand/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/brand/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/brand/pwa/apple-touch-icon.png" />
+
+    <!-- Google Fonts Preconnect & Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Zero-FOUC Theme Detection Script (Executes before initial DOM render) -->
+    <script>
+      (function () {
+        try {
+          var validThemes = ['dark', 'light', 'monochromatic'];
+          var saved = localStorage.getItem('opportunityx-theme');
+          var theme = 'dark';
+          if (saved && validThemes.indexOf(saved) !== -1) {
+            theme = saved;
+          } else {
+            var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            theme = prefersDark ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-canvas text-text-primary antialiased selection:bg-accent-brand selection:text-white min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
