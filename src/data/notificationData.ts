@@ -37,6 +37,118 @@ export const NOTIFICATION_TYPES: { label: string; value: NotificationType | 'ALL
 
 export const NOTIFICATIONS_DATA: NotificationItem[] = [
   {
+    id: 'notif-resume-builder-testing-sep2026',
+    title: 'Resume Builder Is Now Live for Testing',
+    summary:
+      'OpportunityX Resume Builder is now publicly available for testing. Create ATS-compliant technical resumes directly within the ecosystem.',
+    content: `### Resume Builder Is Now Live for Testing
+
+**September 1, 2026**
+
+OpportunityX Resume Builder is now publicly available for testing.
+
+You can now create and work on your resume directly through the OpportunityX ecosystem.
+
+This release marks an important step toward building a more complete career toolkit for students.
+
+The Resume Builder is ready for real-world testing, but development doesn't stop here.
+
+As more students use it, we will continue identifying issues, improving the experience, and refining the product.
+
+Found something that doesn't work as expected?
+
+Report it or tag us with the issue so we can investigate and improve it.
+
+**Build your resume. Test the experience. Help us make it better.**
+
+— OpportunityX`,
+    type: 'RELEASE',
+    priority: 'IMPORTANT',
+    publishedAt: '2026-09-01T10:00:00.000Z',
+    version: 'v2.0.0-beta',
+    href: 'https://resume.opportunityx.co.in',
+    actionText: 'Launch Resume Builder ↗',
+    isPinned: true,
+    status: 'ACTIVE',
+  },
+  {
+    id: 'notif-ecosystem-live-sep2026',
+    title: 'OpportunityX Ecosystem Is Now Live',
+    summary:
+      'Today marks the proper public launch of the OpportunityX ecosystem. Discover how a small hackathon bot evolved into a broader career toolkit.',
+    content: `### OpportunityX Ecosystem Is Now Live
+
+**September 1, 2026**
+
+Today marks the proper public launch of the OpportunityX ecosystem.
+
+What started as a small hackathon alert bot has gradually evolved into a broader ecosystem designed around student opportunities, career preparation, and useful career tools.
+
+The ecosystem is now entering its next phase.
+
+The OpportunityX identity has reached its final logo direction.
+
+The interface has been refined.
+
+The Radar system has been improved.
+
+A new **Monochromatic Mode** has been introduced.
+
+And new products are beginning to become available inside the ecosystem.
+
+This is not the end of development.
+
+It is the beginning of building OpportunityX in public — continuously improving the products, fixing issues, and adding useful capabilities over time.
+
+Welcome to the next chapter of OpportunityX.
+
+**Discover. Build. Grow.**`,
+    type: 'ANNOUNCEMENT',
+    priority: 'IMPORTANT',
+    publishedAt: '2026-09-01T09:00:00.000Z',
+    version: 'v1.0.0',
+    href: '/',
+    actionText: 'Explore Ecosystem',
+    isPinned: true,
+    status: 'ACTIVE',
+  },
+  {
+    id: 'notif-visual-product-update-sep2026',
+    title: 'OpportunityX Gets a New Visual & Product Update',
+    summary:
+      'Finalized logo direction, improved interface refinements, updated Radar discovery engine, and the introduction of Monochromatic Mode.',
+    content: `### OpportunityX Gets a New Visual & Product Update
+
+**September 1, 2026**
+
+OpportunityX is receiving a major product refinement update.
+
+#### Final Logo Direction
+The OpportunityX logo has now reached its final direction. From this point forward, the focus shifts away from changing the brand identity and toward improving the products built under it.
+
+#### Improved UI
+The interface has received another round of refinements to make the overall ecosystem cleaner, more consistent, and easier to use. UI improvements will continue over time as the platform evolves.
+
+#### Radar Improvements
+The OpportunityX Radar system has also been improved, strengthening the way opportunities can be discovered across the ecosystem.
+
+#### Introducing Monochromatic Mode
+A new **Monochromatic Mode** is now available as part of the OpportunityX visual experience. It provides a more minimal, restrained interface while maintaining the core identity of the ecosystem.
+
+This is another step in making OpportunityX more flexible without losing consistency.
+
+More improvements will follow.
+
+**This ecosystem is still being built.**`,
+    type: 'UPDATE',
+    priority: 'NORMAL',
+    publishedAt: '2026-09-01T08:00:00.000Z',
+    href: '/',
+    actionText: 'Explore Updates',
+    isPinned: false,
+    status: 'ACTIVE',
+  },
+  {
     id: 'notif-radar-2-1-release',
     title: 'OpportunityX Radar v2.1.0 Production Release',
     summary:
@@ -53,12 +165,12 @@ We are excited to announce the production release of **OpportunityX Radar v2.1.0
 
 Visit [radar.opportunityx.co.in](https://radar.opportunityx.co.in) to explore opportunities currently open for registration.`,
     type: 'RELEASE',
-    priority: 'IMPORTANT',
+    priority: 'NORMAL',
     publishedAt: '2026-02-15T09:00:00.000Z',
     version: 'v2.1.0',
     href: 'https://radar.opportunityx.co.in',
     actionText: 'Launch Radar ↗',
-    isPinned: true,
+    isPinned: false,
     status: 'ACTIVE',
   },
   {
