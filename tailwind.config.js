@@ -22,7 +22,7 @@ export default {
           strong: 'var(--color-border-strong)',
         },
         accent: {
-          brand: 'var(--color-accent-brand)',
+          brand: 'rgb(var(--color-accent-brand-rgb, 255 107 0) / <alpha-value>)',
           hover: 'var(--color-accent-hover)',
           subtle: 'var(--color-accent-subtle)',
           glow: 'var(--color-accent-glow)',
