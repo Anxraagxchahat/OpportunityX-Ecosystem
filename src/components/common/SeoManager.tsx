@@ -5,15 +5,17 @@ interface SeoManagerProps {
   description?: string;
   canonicalPath?: string;
   ogType?: 'website' | 'article';
+  ogImage?: string;
   publishedTime?: string;
   author?: string;
 }
 
 export const SeoManager: React.FC<SeoManagerProps> = ({
   title,
-  description = 'OpportunityX is a modern career-tech ecosystem empowering ambitious students, developers, and young professionals to discover career-defining opportunities, build real-world products, and validate skills.',
+  description = 'OpportunityX is the unified student & builder Career Operating System. Connecting real-time opportunity discovery, ATS resume architecture, and verified credentials.',
   canonicalPath,
   ogType = 'website',
+  ogImage = 'https://opportunityx.co.in/brand/social/og-image-dark.png',
   publishedTime,
   author,
 }) => {
@@ -79,11 +81,18 @@ export const SeoManager: React.FC<SeoManagerProps> = ({
     setMetaTag('og:url', fullCanonical, true);
     setMetaTag('og:type', ogType, true);
     setMetaTag('og:site_name', 'OpportunityX', true);
+    setMetaTag('og:image', ogImage, true);
+    setMetaTag('og:image:width', '1200', true);
+    setMetaTag('og:image:height', '630', true);
+    setMetaTag('og:image:alt', fullTitle, true);
 
     // 4. Set Twitter Card Tags
     setMetaTag('twitter:card', 'summary_large_image');
+    setMetaTag('twitter:site', '@TheOpportunityX');
+    setMetaTag('twitter:creator', '@TheOpportunityX');
     setMetaTag('twitter:title', fullTitle);
     setMetaTag('twitter:description', description);
+    setMetaTag('twitter:image', ogImage);
 
     // 5. Article-Specific Tags
     if (ogType === 'article') {
@@ -94,7 +103,7 @@ export const SeoManager: React.FC<SeoManagerProps> = ({
         setMetaTag('article:author', author, true);
       }
     }
-  }, [fullTitle, description, fullCanonical, ogType, publishedTime, author]);
+  }, [fullTitle, description, fullCanonical, ogType, ogImage, publishedTime, author]);
 
   return null;
 };

@@ -8,6 +8,27 @@ import { LoadingState } from '@/components/common/LoadingState';
 const FounderPage = lazy(() =>
   import('@/pages/FounderPage').then((m) => ({ default: m.FounderPage }))
 );
+const AboutPage = lazy(() =>
+  import('@/pages/AboutPage').then((m) => ({ default: m.AboutPage }))
+);
+const FaqPage = lazy(() =>
+  import('@/pages/FaqPage').then((m) => ({ default: m.FaqPage }))
+);
+const RoadmapPage = lazy(() =>
+  import('@/pages/RoadmapPage').then((m) => ({ default: m.RoadmapPage }))
+);
+const PressPage = lazy(() =>
+  import('@/pages/PressPage').then((m) => ({ default: m.PressPage }))
+);
+const CareersPage = lazy(() =>
+  import('@/pages/CareersPage').then((m) => ({ default: m.CareersPage }))
+);
+const PartnershipsPage = lazy(() =>
+  import('@/pages/PartnershipsPage').then((m) => ({ default: m.PartnershipsPage }))
+);
+const ResearchPage = lazy(() =>
+  import('@/pages/ResearchPage').then((m) => ({ default: m.ResearchPage }))
+);
 const BlogsPage = lazy(() =>
   import('@/pages/BlogsPage').then((m) => ({ default: m.BlogsPage }))
 );
@@ -52,6 +73,20 @@ export const router = createBrowserRouter([
         index: true,
         element: <HomePage />,
       },
+      // About & Story routes
+      {
+        path: 'about',
+        element: withSuspense(AboutPage),
+      },
+      {
+        path: 'mission',
+        element: withSuspense(AboutPage),
+      },
+      {
+        path: 'story',
+        element: withSuspense(AboutPage),
+      },
+      // Founder routes
       {
         path: 'founder',
         element: withSuspense(FounderPage),
@@ -59,6 +94,39 @@ export const router = createBrowserRouter([
       {
         path: 'meet-the-founder',
         element: <Navigate to="/founder" replace />,
+      },
+      // Ecosystem Knowledge & Roadmap
+      {
+        path: 'faq',
+        element: withSuspense(FaqPage),
+      },
+      {
+        path: 'roadmap',
+        element: withSuspense(RoadmapPage),
+      },
+      {
+        path: 'press',
+        element: withSuspense(PressPage),
+      },
+      {
+        path: 'media-kit',
+        element: withSuspense(PressPage),
+      },
+      {
+        path: 'careers',
+        element: withSuspense(CareersPage),
+      },
+      {
+        path: 'partnerships',
+        element: withSuspense(PartnershipsPage),
+      },
+      {
+        path: 'research',
+        element: withSuspense(ResearchPage),
+      },
+      {
+        path: 'case-studies',
+        element: withSuspense(ResearchPage),
       },
       // Editorial Central Content Hub & Backward Compatibility
       {
