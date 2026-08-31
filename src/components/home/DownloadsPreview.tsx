@@ -1,17 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Download, Smartphone, Monitor, Apple, Terminal, Tablet, Clock, Wrench } from 'lucide-react';
+import { ArrowRight, Download, Clock, Wrench } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { getOrderedDownloads, DownloadAsset, DownloadStatus } from '@/data/downloadData';
-
-// Compact platform icon mapping
-const PLATFORM_ICONS: Record<string, React.ReactNode> = {
-  android: <Smartphone className="h-5 w-5" aria-hidden="true" />,
-  windows: <Monitor className="h-5 w-5" aria-hidden="true" />,
-  macos: <Apple className="h-5 w-5" aria-hidden="true" />,
-  linux: <Terminal className="h-5 w-5" aria-hidden="true" />,
-  ios: <Tablet className="h-5 w-5" aria-hidden="true" />,
-};
+import { getPlatformIcon } from '@/components/common/PlatformIcons';
 
 const STATUS_LABEL: Record<DownloadStatus, { text: string; icon: React.ReactNode }> = {
   AVAILABLE: { text: 'Available', icon: <Download className="h-3 w-3" aria-hidden="true" /> },
@@ -28,7 +20,7 @@ const STATUS_STYLE: Record<DownloadStatus, string> = {
 };
 
 function PlatformPill({ asset }: { asset: DownloadAsset }) {
-  const icon = PLATFORM_ICONS[asset.platform];
+  const icon = getPlatformIcon(asset.platform, 'h-5 w-5');
   const status = STATUS_LABEL[asset.status];
   const statusStyle = STATUS_STYLE[asset.status];
 

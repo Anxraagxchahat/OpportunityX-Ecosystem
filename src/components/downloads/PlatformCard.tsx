@@ -1,19 +1,8 @@
 import React from 'react';
-import { Smartphone, Monitor, Apple, Terminal, Tablet, Download, Clock, Wrench, XCircle } from 'lucide-react';
+import { Download, Clock, Wrench, XCircle } from 'lucide-react';
 import { DownloadAsset, DownloadStatus, STATUS_LABELS } from '@/data/downloadData';
 import { ChecksumBadge } from './ChecksumBadge';
-
-// --------------------------------------------------------------------------
-// Platform Icon Mapping
-// Uses Lucide icons only — no external logo SVGs
-// --------------------------------------------------------------------------
-const PLATFORM_ICONS: Record<string, React.ReactNode> = {
-  android: <Smartphone className="h-6 w-6" aria-hidden="true" />,
-  windows: <Monitor className="h-6 w-6" aria-hidden="true" />,
-  macos: <Apple className="h-6 w-6" aria-hidden="true" />,
-  linux: <Terminal className="h-6 w-6" aria-hidden="true" />,
-  ios: <Tablet className="h-6 w-6" aria-hidden="true" />,
-};
+import { getPlatformIcon } from '@/components/common/PlatformIcons';
 
 // --------------------------------------------------------------------------
 // Status Badge Styling
@@ -45,7 +34,7 @@ export const PlatformCard: React.FC<PlatformCardProps> = ({
   asset,
   className = '',
 }) => {
-  const icon = PLATFORM_ICONS[asset.platform] || <Monitor className="h-6 w-6" aria-hidden="true" />;
+  const icon = getPlatformIcon(asset.platform, 'h-6 w-6');
   const isAvailable = asset.status === 'AVAILABLE' && asset.downloadUrl;
 
   return (
