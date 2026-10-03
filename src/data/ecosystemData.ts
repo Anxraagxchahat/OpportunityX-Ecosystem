@@ -193,14 +193,39 @@ export const ECOSYSTEM_PRODUCTS: EcosystemProduct[] = [
   },
 
   // ==========================================
-  // 2. IN DEVELOPMENT (Active Priority)
+  // 2. IN DEVELOPMENT (Active Priority: Skeddo)
   // ==========================================
+  {
+    id: 'skeddo',
+    name: 'Skeddo by OpportunityX',
+    shortName: 'Skeddo',
+    status: 'in-development',
+    isDevelopmentPriority: true,
+    tagline: 'College attendance, timetable & academic planning',
+    description:
+      'A student-focused academic control center for managing attendance, schedules, academic events and smarter college planning.',
+    category: 'Academic Management',
+    categories: [
+      'Attendance Tracking',
+      'Smart Timetable',
+      'Academic Calendar',
+      'Recovery Planning',
+      'Smart Skip',
+    ],
+    capabilities: [
+      'Attendance tracking & subject-wise planning',
+      'Smart timetable, working days & schedule management',
+      'Academic calendar, exams & event management',
+      'Recovery, safe-miss & smart skip planning',
+    ],
+    releaseInfo: 'Current Active Engineering Priority',
+  },
   {
     id: 'learn',
     name: 'OpportunityX Learning Hub',
     shortName: 'Learn',
     status: 'in-development',
-    isDevelopmentPriority: true,
+    isDevelopmentPriority: false,
     tagline: 'Interactive career pathways, roadmaps & developer curriculum.',
     description:
       'Structured engineering pathways, 15+ domain tracks, role explorer, interactive career roadmaps, and AI career coaching designed for students transitioning into industry-ready builders.',
@@ -218,7 +243,7 @@ export const ECOSYSTEM_PRODUCTS: EcosystemProduct[] = [
       'Role explorer with compensation & tech specs',
       'AI career coach & skill quests scheduler',
     ],
-    releaseInfo: 'Current Active Engineering Priority',
+    releaseInfo: 'In Active Engineering Phase',
   },
 
   // ==========================================

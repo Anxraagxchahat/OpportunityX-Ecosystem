@@ -16,6 +16,7 @@ import {
   AlertCircle,
   LucideIcon,
   Radio,
+  CalendarDays,
 } from 'lucide-react';
 import { EcosystemProduct } from '@/data/ecosystemData';
 import { StatusBadge } from './StatusBadge';
@@ -30,6 +31,7 @@ const PRODUCT_ICONS: Record<string, LucideIcon> = {
   radar: Radio,
   verification: ShieldCheck,
   resume: FileText,
+  skeddo: CalendarDays,
   learn: GraduationCap,
   freelance: Terminal,
   jobs: Briefcase,
