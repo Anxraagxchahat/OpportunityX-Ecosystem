@@ -37,6 +37,41 @@ export const NOTIFICATION_TYPES: { label: string; value: NotificationType | 'ALL
 
 export const NOTIFICATIONS_DATA: NotificationItem[] = [
   {
+    id: 'notif-skeddo-announcement-oct2026',
+    title: 'Building Skeddo by OpportunityX — Academic & Attendance Control Center',
+    summary:
+      'We are actively engineering Skeddo by OpportunityX — a student-focused academic control center designed for managing attendance, schedules, events, and smarter college planning.',
+    content: `### Skeddo by OpportunityX Enters Active Engineering Phase
+
+**October 3, 2026**
+
+OpportunityX is officially beginning the active buildout of **Skeddo by OpportunityX**, our dedicated student academic control center and timetable management platform.
+
+#### What We're Building
+College life shouldn't be governed by messy spreadsheets or generic attendance calculators. Skeddo is engineered from the ground up as a comprehensive academic management platform for students:
+
+- **Attendance Tracking & Planning:** Subject-wise minimum threshold monitoring, margin calculators, and safe-miss projections.
+- **Smart Timetable Management:** Dynamic schedule engine accommodating working days, lab slots, rotations, and timetable changes.
+- **Academic Calendar & Events:** Centralized tracking for internal assessments, university exams, submissions, and campus events.
+- **Recovery & Smart Skip Planning:** Predictive planning that calculates exactly when you can take a day off and how to recover attendance effortlessly.
+
+#### Engineering & Timeline
+Skeddo has been designated as our **Current Active Development Priority**.
+
+Building a robust, offline-capable, and friction-free academic system takes careful architectural engineering and attention to detail. We are taking the time required to build it right rather than rushing an incomplete tool.
+
+We will share regular updates, architecture previews, and early access timelines as engineering milestones are completed.
+
+**This is the next step in our student toolkit.**
+
+— OpportunityX Team`,
+    type: 'ANNOUNCEMENT',
+    priority: 'IMPORTANT',
+    publishedAt: '2026-10-03T10:00:00.000Z',
+    isPinned: true,
+    status: 'ACTIVE',
+  },
+  {
     id: 'notif-resume-builder-testing-sep2026',
     title: 'Resume Builder Is Now Live for Testing',
     summary:
